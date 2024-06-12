@@ -1,7 +1,6 @@
 // screens/List.js
 import React from 'react';
-import { View, Text, Button, TouchableOpacity } from 'react-native';
-// import { points } from './points.json'
+import { View, Text, Button, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
 
 const List = ({ navigation }) => {
 
@@ -14,7 +13,7 @@ const List = ({ navigation }) => {
   const Card = ({ item }) => {
     return (
       <TouchableOpacity
-        style={{ margin: 10, padding: 10, borderColor: 'black', borderWidth: 1 }}
+        style={[styles.cardContainer, {width: '100%', alignSelf: 'stretch'}]}
         onPress={() => navigation.navigate('Map', { item })}
       >
         <Text>Name: {item.name}</Text>
@@ -29,10 +28,28 @@ const List = ({ navigation }) => {
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>List Screen. Design list of points here</Text>
 
-      {points.map((point, index) => <Card key={index} item={point} />)}
+      <ScrollView contentContainerStyle={styles.scrollViewContent}>
+        {points.map((point, index) => (
+          <Card key={index} item={point} />
+        ))}
+      </ScrollView>
 
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  scrollViewContent: {
+    paddingHorizontal: 10, // Adds horizontal padding to the content inside ScrollView
+  },
+  cardContainer: {
+    margin: 10,
+    padding: 10,
+    borderColor: 'black',
+    borderWidth: 1,
+    backgroundColor: '#fff', // Optional: adds a white background color to the cards
+    borderRadius: 5, // Optional: rounds the corners of the cards
+  },
+});
 
 export default List;
