@@ -6,6 +6,18 @@ import { View, Text, Button, StyleSheet, Image } from 'react-native';
 import point1 from '../data/photos/point1.jpg';
 import point2 from '../data/photos/point2.jpg';
 import point3 from '../data/photos/point3.jpg';
+import point4 from '../data/photos/point4.jpg';
+import point5 from '../data/photos/point5.jpg';
+import point6 from '../data/photos/point6.jpg';
+import point7 from '../data/photos/point7.jpg';
+import point8 from '../data/photos/point8.jpg';
+import point9 from '../data/photos/point9.jpg';
+import point10 from '../data/photos/point10.jpg';
+import point11 from '../data/photos/point11.jpg';
+import point12 from '../data/photos/point12.jpg';
+import point13 from '../data/photos/point13.jpg';
+import point14 from '../data/photos/point14.jpg';
+import point15 from '../data/photos/point15.jpg';
 // Add more imports as needed
 
 
@@ -18,6 +30,18 @@ const Details = ({ navigation, route }) => {
     point1,
     point2,
     point3,
+    point4,
+    point5,
+    point6,
+    point7,
+    point8,
+    point9,
+    point10,
+    point11,
+    point12,
+    point13,
+    point14,
+    point15,
     // Add more images to the array as needed
   ];
   const imagePath = images[item.pointNumber - 1]; // Adjust indexing based on your pointNumber starting index
