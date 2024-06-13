@@ -48,15 +48,15 @@ const Details = ({ navigation, route }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Place Details</Text>
+      <Text style={styles.title}>Location</Text>
       <Image source={imagePath} style={styles.image} />
-      <Text style={styles.label}>Name: <Text style={styles.value}>{item.name}</Text></Text>
-      <Text style={styles.label}>Address: <Text style={styles.value}>{item.address}</Text></Text>
-      <Text style={styles.label}>Latitude: <Text style={styles.value}>{item.latitude}</Text></Text>
-      <Text style={styles.label}>Longitude: <Text style={styles.value}>{item.longitude}</Text></Text>
-      <Text style={styles.label}>Point Number: <Text style={styles.value}>{item.pointNumber}</Text></Text>
+      <Text style={styles.location}><Text style={styles.location}>{item.name}</Text></Text>
+      <Text style={styles.details}>Address: <Text style={styles.details}>{item.address}</Text></Text>
+      <Text style={styles.details}>Latitude: <Text style={styles.details}>{item.latitude}</Text></Text>
+      <Text style={styles.details}>Longitude: <Text style={styles.details}>{item.longitude}</Text></Text>
+      <Text style={styles.point}>Point Number: <Text style={styles.point}>{item.pointNumber}</Text></Text>
       <Button
-        title="Return to List"
+        title ="Return to List"
         onPress={() => navigation.navigate('List')}
       />
     </View>
@@ -68,7 +68,8 @@ const styles = StyleSheet.create({
     flex: 1, 
     justifyContent: 'center', 
     alignItems: 'center', 
-    padding: 20 
+    padding: 20,
+    backgroundColor: '#b8d8d8' 
   },
   title: { 
     fontSize: 24, 
@@ -76,16 +77,30 @@ const styles = StyleSheet.create({
     marginBottom: 20 
   },
   image: {
-    width: 100,
-    height: 100,
+    width: 300,
+    height: 300,
     marginBottom: 20
   },
-  label: { 
-    fontSize: 18, 
-    marginVertical: 5 
+  details: { 
+    fontSize: 15, 
+    marginVertical: 5,
+    textAlign: 'center',
+    marginHorizontal: 5 
   },
-  value: {
-    fontWeight: 'normal'
+  location: { 
+    fontSize: 18, 
+    fontWeight: 'bold',
+    textAlign: 'center', 
+    marginVertical: 5
+  },
+  return: {
+    color: 'black',
+    marginVertical: 10
+  },
+  point: {
+    fontSize: 15, 
+    marginVertical: 5,
+    marginBottom: 15
   }
 });
 

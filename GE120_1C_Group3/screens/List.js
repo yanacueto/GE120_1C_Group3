@@ -30,22 +30,18 @@ const List = ({ navigation }) => {
       >
         <Text>{item.name}</Text>
         <Text>Point Number: {item.pointNumber}</Text>
-        <Text>Latitude: {item.latitude}</Text>
-        <Text>Longitude: {item.longitude}</Text>
       </TouchableOpacity>
     );
   }
 
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>List Screen. Design list of points here</Text>
-
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#4F6367' }}>
+      <Text style={{justifyContent: 'center', alignItems: 'center', marginTop: 10, color: 'white' }}>Possible Locations for Control Points in UP Diliman</Text>
       <ScrollView contentContainerStyle={styles.scrollViewContent}>
         {points.map((point, index) => (
           <Card key={index} item={point} />
         ))}
       </ScrollView>
-
     </View>
   );
 };
@@ -53,13 +49,14 @@ const List = ({ navigation }) => {
 const styles = StyleSheet.create({
   scrollViewContent: {
     paddingHorizontal: 10, // Adds horizontal padding to the content inside ScrollView
+    backgroundColor: '#4F6367'
   },
   cardContainer: {
-    margin: 10,
+    margin: 6,
     padding: 10,
     borderColor: 'black',
     borderWidth: 1,
-    backgroundColor: '#fff', // Optional: adds a white background color to the cards
+    backgroundColor: '#b8d8d8', // Optional: adds a white background color to the cards
     borderRadius: 5, // Optional: rounds the corners of the cards
   },
 });
