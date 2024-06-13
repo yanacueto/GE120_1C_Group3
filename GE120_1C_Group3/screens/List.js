@@ -28,7 +28,7 @@ const List = ({ navigation }) => {
         style={[styles.cardContainer, {width: '100%', alignSelf: 'stretch'}]}
         onPress={() => navigation.navigate('Map', { item })}
       >
-        <Text>Name: {item.name}</Text>
+        <Text>{item.name}</Text>
         <Text>Point Number: {item.pointNumber}</Text>
         <Text>Latitude: {item.latitude}</Text>
         <Text>Longitude: {item.longitude}</Text>
