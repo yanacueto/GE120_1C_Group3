@@ -56,6 +56,7 @@ const Details = ({ navigation, route }) => {
       <Text style={styles.details}>Longitude: <Text style={styles.details}>{item.longitude}</Text></Text>
       <Text style={styles.point}>Point Number: <Text style={styles.point}>{item.pointNumber}</Text></Text>
       <Button
+        color = '#FE5F55'
         title ="Return to List"
         onPress={() => navigation.navigate('List')}
       />
